@@ -6,7 +6,7 @@ from core.mail import send_mail_template
 
 class RegisterForm(forms.ModelForm):
     password = forms.CharField(label='Senha', widget=forms.PasswordInput) 
-    confirm = forms.CharField(label='Confirmação de Senha', widget=forms.PasswordInput)
+    confirm = forms.CharField(label='Confirmação', widget=forms.PasswordInput)
 
     def clean_confirm(self):
         password = self.cleaned_data.get('password')
@@ -24,7 +24,7 @@ class RegisterForm(forms.ModelForm):
     
     class Meta:
         model = User
-        fields = ['username', 'email', 'first_name', 'last_name' ]
+        fields = ['name', 'ocucupation', 'email']
 
 class EditAccountForm(forms.ModelForm):
     def clean_email(self):
@@ -36,7 +36,7 @@ class EditAccountForm(forms.ModelForm):
 
     class Meta:
         model = User
-        fields = ['username', 'email', 'first_name', 'last_name' ]
+        fields = ['name','ocucupation', 'email']
 
 
 class PasswordResetForm(forms.Form):
@@ -50,7 +50,7 @@ class PasswordResetForm(forms.Form):
 
     def save(self):
         user = User.objects.get(email = self.cleaned_data['email'])
-        key = generate_hash_key(user.username)
+        key = generate_hash_key(user.email)
         reset = PasswordReset(key= key, user = user)
         reset.save()
         template_name = 'password_reset_email.html'

@@ -12,6 +12,10 @@
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
+html, body{
+  min-height: 100% !important;
+}
+
 body {
   margin: 0 auto;
   line-height: 1.7em;
@@ -19,9 +23,10 @@ body {
 a {
   color: #3b8bba;
 }
-.content {
-  /* padding-top: 2em; */
+.content.h-80 {
+  height: 80%;
 }
+
 .l-box {
   padding: 1em;
 }
@@ -35,6 +40,11 @@ a {
 .header .pure-menu a {
   color: #fff;
 }
+
+.bg-login{
+  background-color: #dad6ce;
+}
+
 .header .pure-menu li a:hover,
 .header .pure-menu li a:focus {
   background: none;
@@ -149,18 +159,21 @@ ul.errorlist {
 ul.errorlist li {
   color: #C53F3F;
   display: block;
-  margin: 0.3em 0;
+  margin: 0px 0px -10px;
   font-size: 0.9em;
   border: none;
   padding: 0;
+  text-align: left;
 }
 form.pure-form-aligned ul.errorlist li {
-  padding-left: 11.5em;
+  /* padding-left: 11.5em; */
 }
 .pure-form label {
   margin: 1em 0 0;
   font-weight: bold;
   font-size: 100%;
+  min-width: 100px;
+  text-align: left;
 }
 .pure-form input[type], .pure-form textarea, .pure-form  select {
   border: 2px solid #ddd;
@@ -175,6 +188,7 @@ form.pure-form-aligned ul.errorlist li {
 }
 .pure-form .pure-control-group {
   margin-bottom: 1em;
+  min-width: 51px;
 }
 .pure-button {
   background-color: #1f8dd6;
@@ -219,7 +233,7 @@ ul.errorlist {
   color: crimson;
   list-style: disc;
   font-size: 0.75em;
-  background: antiquewhite;
+  /* background: antiquewhite; */
   padding: 0px 0px 0px 25px;
   margin-bottom: 6px;
 }
@@ -343,6 +357,8 @@ ul.breadcrumbs {
 
 .section-heading {
   font-family: 'xilo';
+  font-size: 2.5rem;
+  text-decoration: underline;
 }
 .img-flip{
   transform: scaleX(-1);
@@ -381,7 +397,7 @@ h4.my-3.step {
   font-size: 3rem;
 }
 
-#facaparte h2 {
+#facaparte h2, #login h2, #registro h2 {
   background-image: url(../assets/img/1.png), url(../assets/img/1.png);
   background-position: right top, left top;
   background-repeat: no-repeat, no-repeat;
@@ -445,6 +461,34 @@ header.heading {
 
 .text-justify {
   text-align: justify;
+}
+
+
+#login .col-sm-5, #registro .col-sm-5{
+
+  margin: auto;
+  text-align: center;
+
+}
+
+ul#user-menu li {
+  display: inline-block;
+  background-color: rgba(255,255,255,0.5);
+  padding: 10px;
+  min-width: 88px;
+}
+
+ul#user-menu li a{
+  color: rgba(255,255,255,1);
+  text-decoration: none;
+}
+
+ul#user-menu li a:hover{
+  color:#997800;
+  transition: all 0.5s;
+}
+ul#user-menu {
+  padding: 0px;
 }
 
 @media (min-width: 992px){

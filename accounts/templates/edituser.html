@@ -2,12 +2,13 @@
 {% block dashboard_tite %}
     Editar Conta
 {% endblock %}
-{% block breadcrumb %}
-    {{  block.super }}
-    <li>/</li>
-    <li><a href="{% url 'panel:edituser' %}"> Editar Conta </a></li>
-{% endblock %}
+
 {% block dashboard_content %}
+    <style>
+        #user-menu #a-conta{
+            color: rgb(252, 122, 0);
+        }
+    </style>
     <form class="pure-form pure-form-aligned" method="POST">
         {% csrf_token %}
         {% if success %}

@@ -1,38 +1,56 @@
 {% extends "base.html" %}
+{% load static %}
 {% block content %}
-    <div class="splash">
-        <div class="pure-g-r content-ribbon">
-            <div class="pure-u-1">
-                <div class="l-box splash-text">
-                    <h1 class="splash-head">
-                       Cadastre-se no sistema
-                    </h1>
-                    <h2 class="splash-subhead">
-                        Informe seus dados de cadastro
-                    </h2>
-                    
+    <style>
+       #mainNav{
+           background-color: #212529 !important;
+       }
+       #a-register {
+           background-color: #FFBE00 !important;
+           color:black;
+       }
+
+        body{
+            background:black;
+        }
+    </style>
+    <!-- Heading Row-->
+     <header id="registro" class="heading">
+         <div class="container">
+            <div class="row">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">Cadastrar-se</h2>
                 </div>
             </div>
-        </div>
-    </div>
-    <div class="pure-g-r content-ribbon">
-        <div class="pure-u-1">
-            <form class="pure-form pure-form-aligned" method="POST">
-                {% csrf_token %}
-                <fieldset>
-                    {{ form.non_field_errors }}
-                    {% for field in form %}
-                    <div class="pure-control-group">
-                      {{ field.label_tag }}
-                      {{ field }}
-                      {{ field.errors }}
+    </header>
+    
+    <section class="page-section bg-light h-100" id="registro">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-5 col-md-6 mb-3 p-45 ">
+                    <div class="pure-g-r content-ribbon bg-login p-4">
+                     {{ form.non_field_errors }}
+                        <div class="pure-u-1">
+                            <form class="pure-form pure-form-aligned" method="POST">
+                            {% csrf_token %}
+                            <fieldset>
+                            {{ form.non_field_errors }}
+                            {% for field in form %}
+                            <div class="pure-control-group">
+                                {{ field.label_tag }}
+                                {{ field }}
+                                {{ field.errors }}
+                            </div>
+                            {% endfor %}
+                            <div class="pure-controls">
+                                <button type="submit" class="btn btn-lg bg-warning">Cadastrar</button>
+                            </div>
+                            </fieldset>
+                            </form>
+                        </div>
                     </div>
-                    {% endfor %}
-                    <div class="pure-controls">
-                        <button type="submit" class="pure-button pure-button-primary">Cadastrar</button>
-                    </div>
-                </fieldset>
-            </form>
+                </div>
+            </div>  
         </div>
-    </div>
+    </section>
 {% endblock %}
