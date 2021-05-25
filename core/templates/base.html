@@ -4,36 +4,67 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Simple MOOC - Uma simples plataforma de ensino a distância" />
-    <title>MOOCKINHO</title>
-    <link rel="stylesheet" href="{% static 'css/pure-min.css' %}">
+    <meta name="description" content="Letras Potengienses" />
+    <title>LetrasPotengienses</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="{% static 'assets/favicon.png'%}" />
+    <!-- Font Awesome icons (free version)-->
+    <script src="https://use.fontawesome.com/releases/v5.15.3/js/all.js" crossorigin="anonymous"></script>
+    <!-- Google fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700" rel="stylesheet" type="text/css" />
+ 
+     <!-- Template -->
+    <link rel="stylesheet" href="{% static 'css/template.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+    
 </head>
-<body>
-<div class="header">
-    <div class="pure-menu pure-menu-open pure-menu-fixed pure-menu-horizontal">
-            <a class="pure-menu-heading" href="{% url 'core:home' %}">MOOCKINHO</a>
-            <ul>
-                <li class="pure-menu-selected"><a href="{% url 'core:home' %}">Início</a></li>
-              
-                <li><a href="{% url 'core:contact' %}">Contato</a></li>
-                {% if user.is_authenticated %}
-                <li><a href="{% url 'panel:dashboard' %}">Painel</a></li>
-                <li><a href="{% url 'panel:logout' %}">Sair</a></li>
-                {% else %}
-                <li><a href="{% url 'panel:login' %}">Acessar</a></li>
-                {% endif %}
-            </ul>
+<body id="page-top">
+    <!-- Navigation-->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+        <div class="container">
+            <a class="navbar-brand" href="#page-top"><img src="{% static 'assets/img/logos/logo.png'%}" alt="..." /></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars "></i>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="#page-top">Início</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Projeto</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">Acervo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Entrar</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+   
+    <div class="content">
+        {% block content %}{% endblock %}
     </div>
-</div>
-<div class="content">
-    {% block content %}{% endblock %}
+    <!-- Footer-->
+    <footer class="footer py-4">
+        <div class="container">
+            <div class="row align-items-center">
+                <span id="copyrights" class="bg-dark">
+                    &copy; Letras Potengienses
+                  
+                </span>
+                <div>
+                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-dark btn-social mx-2" href="#!"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+               
+            </div>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"></script>
 
-</div>
-<div class="footer">
-   MOOCKINHO - Uma simples plataforma de ensino a distância
-</div>
-<script src="http://yui.yahooapis.com/3.12.0/build/yui/yui-min.js"></script>
+    <!--  Template -->
+    <script src="{% static 'js/template.js' %}" crossorigin="anonymous"></script>
 </body>
 
 </html>

@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'xilosaxilosa';
+  src: url('xilosa_-webfont.woff2') format('woff2'),
+       url('xilosa_-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -11,7 +20,7 @@ a {
   color: #3b8bba;
 }
 .content {
-  padding-top: 2em;
+  /* padding-top: 2em; */
 }
 .l-box {
   padding: 1em;
@@ -121,11 +130,17 @@ body .primary-button {
   font-weight: normal;
 }
 .footer {
-  background: #2d3e50;
+  background: black;
   color: #fff;
   text-align: center;
-  padding: 1em;
+  padding: 1em 0px;
   font-size: 80%;
+  background-image: url(../assets/img/backgrounds/rodape.png);
+  /* background-repeat: no-repeat; */
+  background-size: contain;
+  /* line-height: 135px; */
+  /* background-position: 0; */
+  border-top: 5px solid #ffc800;
 }
 ul.errorlist {
   margin: 0;
@@ -317,10 +332,108 @@ ul.breadcrumbs {
   transform: rotate(-45deg);
 }
 
+
+.navbar-brand {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.w-100 {
+  max-height: 700px;
+}
+
+.section-heading {
+  font-family: 'xilo';
+}
+.img-flip{
+  transform: scaleX(-1);
+}
+
+section#facaparte {
+  background: #ffc800;
+  border-top: 5px solid black;
+}
+
+h4.my-3.step {
+  line-height: 100px;
+  background-color: black;
+  border-radius: 100px;
+  margin: auto;
+  width: 100px;
+  color: #ffc800;
+  font-family: 'Roboto Slab';
+  font-size: 3rem;
+}
+
+#facaparte h2 {
+  background-image: url(../assets/img/1.png), url(../assets/img/1.png);
+  background-position: right top, left top;
+  background-repeat: no-repeat, no-repeat;
+  background-size:auto 100%, auto 100%;
+}
+
+
+#depoimentos{  
+  background: #ECEBE7;
+  border-top: 5px solid black;
+}
+
+
+#depoimentos h2 {
+  background-image: url(../assets/img/2.png), url(../assets/img/2.png);
+  background-position: right top, left top;
+  background-repeat: no-repeat, no-repeat;
+  background-size:auto 100%, auto 100%;
+}
+
+
+#mainNav .navbar-nav .nav-item a{
+  background-color: rgba(0,0,0,0.1);
+  min-width: 100px;
+  text-align: center;
+}
+
+#copyrights{
+  margin: auto;
+  width: auto;
+  margin-bottom: 1rem;
+}
+
+#depoimentos .carousel-item {
+  min-height: 160px;
+  background: rgba(0,0,0,0.2);
+}
+
+@media (min-width: 992px){
+  .navbar-expand-lg .navbar-nav {
+    flex-direction: row;
+    line-height: 65px;
+  }  
+}
+
+@media (max-width: 992px) {
+  .w-100 {
+    max-height: 480px;
+  }
+
+  #mainNav .navbar-brand img {
+    height: 2.5rem;
+  }
+  
+  header.masthead {
+      padding-top: 280px;
+      padding-bottom: 0;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .modal__inner {
     width: 90%;
     height: 90%;
     box-sizing: border-box;
+  }
+
+  header.masthead {
+    padding-top: 90px;
+    padding-bottom: 0;
   }
 }
