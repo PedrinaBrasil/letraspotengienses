@@ -17,24 +17,23 @@
      <!-- Template -->
     <link rel="stylesheet" href="{% static 'css/template.css' %}"/>
     <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
-    
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />    
 </head>
 <body id="page-top">
     <!-- Navigation-->
     <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
         <div class="container">
-            <a class="navbar-brand" href="#page-top"><img src="{% static 'assets/img/logos/logo.png'%}" alt="..." /></a>
+            <a class="navbar-brand" href="{% url 'core:home' %}"><img src="{% static 'assets/img/logos/logo.png'%}" alt="..." /></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <i class="fas fa-bars "></i>
             </button>
             
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav text-uppercase ms-auto py-4 py-lg-0">
-                    <li class="nav-item"><a class="nav-link" href="#page-top">Início</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Projeto</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">Acervo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#team">Entrar</a></li>
+                    <li class="nav-item"><a id="a-home" class="nav-link" href="{% url 'core:home' %}">Início</a></li>
+                    <li class="nav-item"><a id="a-about" class="nav-link" href="{% url 'core:about' %}">Projeto</a></li>
+                    <li class="nav-item"><a id="a-lib" class="nav-link" href="#about">Acervo</a></li>
+                    <li class="nav-item"><a id="a-login" class="nav-link" href="#team">Entrar</a></li>
                 </ul>
             </div>
         </div>

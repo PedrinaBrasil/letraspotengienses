@@ -348,9 +348,26 @@ ul.breadcrumbs {
   transform: scaleX(-1);
 }
 
-section#facaparte {
+#facaparte {
   background: #ffc800;
   border-top: 5px solid black;
+}
+
+#team {
+  border-top: 5px solid rgba(0, 0, 0, 0.1);
+}
+
+#parceiros {
+  background: #ced4da;
+  color: white;
+  border-top: 5px solid rgba(0, 0, 0, 0.1);
+}
+
+#team h2.section-heading {
+  background-image: url(../assets/img/2.png), url(../assets/img/2.png);
+  background-position: right top, left top;
+  background-repeat: no-repeat, no-repeat;
+  background-size:auto 100%, auto 100%;
 }
 
 h4.my-3.step {
@@ -372,7 +389,7 @@ h4.my-3.step {
 }
 
 
-#depoimentos{  
+#depoimentos, #descricao{  
   background: #ECEBE7;
   border-top: 5px solid black;
 }
@@ -403,6 +420,33 @@ h4.my-3.step {
   background: rgba(0,0,0,0.2);
 }
 
+header.heading {
+  background-color: #FFBE00;
+  padding-top: 7rem;
+  padding-bottom: 2rem;
+}
+
+#about h2 {
+  background-image: url(../assets/img/3.png), url(../assets/img/3.png);
+  background-position: right top, left top;
+  background-repeat: no-repeat, no-repeat;
+  background-size:auto 100%, auto 100%;
+  text-decoration: underline;
+  font-size: 3rem;
+  font-family: 'xilo', Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+#i-about{
+  height: fit-content;
+  width: fit-content;
+  max-height: 650px;
+  object-fit: none;
+  object-position: -28px;
+}
+
+.text-justify {
+  text-align: justify;
+}
+
 @media (min-width: 992px){
   .navbar-expand-lg .navbar-nav {
     flex-direction: row;
@@ -420,8 +464,19 @@ h4.my-3.step {
   }
   
   header.masthead {
-      padding-top: 280px;
+      padding-top: 90px;
       padding-bottom: 0;
+  }
+  #descricao .col-lg-5{
+    text-align: center;
+  }
+
+  #i-about{
+    max-height: 300px;
+    width: 460px;
+    margin: auto;
+    object-fit: none;
+    object-position: center;
   }
 }
 

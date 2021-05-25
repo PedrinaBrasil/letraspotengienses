@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <style>
+       #mainNav{
+           background-color: #212529 !important;
+       }
+       #a-about {
+           background-color: #FFBE00 !important;
+           color:black;
+       }
+    </style>
+    <!-- Heading Row-->
+    <header id="about" class="heading">
+         <div class="container">
+            <div class="row">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">SOBRE</h2>
+                </div>
+            </div>
+    </header>
+    
+    <section class="page-section" id="descricao">
+        <div class="container">
+            <!-- Heading Row-->
+            <div class="row gx-4 gx-lg-5 align-items-top my-5">
+                <div class="col-lg-7">
+                    <p class="text-wrap text-justify">O projeto de pesquisa Letras Potengienses é uma iniciativa de professores e alunos de Língua Portuguesa do Instituto Federal de Educação, Ciência e Tecnologia do Rio Grande do Norte - Campus São Paulo do Potengi -, com o objetivo de empreender um levantamento dos enunciados literários da referida cidade.</p>
+                    <p class="text-wrap text-justify">Seu propósito maior é viabilizar o acesso da população às Letras locais, como legado da investigação e da catalogação de sua produção literária, ampliando conhecimentos acerca do município em seu aspecto discursivo e adensando a consciência sobre a existência e a importância de um “acervo literário potengiense”, na sua condição de patrimônio imaterial da cidade.</p>
+                    <p class="text-wrap text-justify">Pautado em um diálogo profícuo com os escritores locais, boa parte deles componente da Academia Potengiense de Letras e Artes (APLA), o projeto construiu um inventário das obras regionais por eles produzidas. Ao fim dele, como conquista maior, apresentamos um acervo físico e digital de títulos/obras potengienses, partícipes de um catálogo rico, entregue à sociedade local com admiração e entusiasmo.</p>
+                    <p class="text-wrap text-justify">Agradecemos a todos os colaboradores desta pesquisa e desejamos a você, car@ visitante, que explore este acervo e viva a sensível experiência de se encontrar e se encantar com o que têm a dizer as Letras de São Paulo do Potengi.</p>
+                    <p class="text-wrap text-justify">Seja bem-vind@!</p>
+                </div>
+                <div class="col-lg-5">
+                    <img id="i-about" class="img-fluid rounded mb-4 mb-lg-0" src="{% static 'assets/img/about.jpg' %}" alt="..." />
+                </div>
+                
+            </div>    
+        </div>
+    </section>    
+    
+        <section class="page-section bg-light" id="team">
+            <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-heading text-uppercase">Equipe</h2>
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="{% static 'assets/img/team/1.jpg'%}" alt="..." />
+                            <h4>Karen Luiza Cruz Rezende</h4>
+                            <p class="text-muted">Aluna</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="{% static 'assets/img/team/2.jpg' %}" alt="..." />
+                            <h4>Maria Camily de Alencar Dias</h4>
+                            <p class="text-muted">Aluna</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="{% static 'assets/img/team/3.jpg'%}" alt="..." />
+                            <h4>Mateus Levy Basílio de Macedo</h4>
+                            <p class="text-muted">Aluno</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="{% static 'assets/img/team/4.jpg'%}" alt="..." />
+                            <h4>Bruno de Paula Barbosa</h4>
+                            <p class="text-muted">Professor de Língua Portuguesa/Inglesa</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="{% static 'assets/img/team/5.jpg'%}" alt="..." />
+                            <h4>Fernanda de Moura Ferreira</h4>
+                            <p class="text-muted">Professora de Língua Portuguesa e Literatura Brasileira</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="team-member">
+                            <img class="mx-auto rounded-circle" src="{% static 'assets/img/team/6.jpg'%}" alt="..." />
+                            <h4>Tacicleide Dantas Vieira</h4>
+                            <p class="text-muted">Coordenadora do projeto</p>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+    </section>
+    <!-- Parceiros -->
+    <section class="page-section" id="parceiros">
+         <div class="container">
+                <div class="text-center mb-5">
+                    <h2 class="section-heading text-uppercase">Parceiros</h2>
+                </div>
+                <div class="row align-items-center">
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="{% static 'assets/img/logos/ifrn.png'%}" alt="..." /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="{% static 'assets/img/logos/ifrn.png'%}" alt="..." /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="{% static 'assets/img/logos/ifrn.png'%}" alt="..." /></a>
+                    </div>
+                    <div class="col-md-3 col-sm-6 my-3">
+                        <a href="#!"><img class="img-fluid img-brand d-block mx-auto" src="{% static 'assets/img/logos/ifrn.png'%}" alt="..." /></a>
+                    </div>
+                </div>
+            </div>
+    </section>
+{% endblock %}
