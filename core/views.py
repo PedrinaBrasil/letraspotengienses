@@ -5,8 +5,8 @@ from django.http import HttpResponse
 def home(request):
    return render(request, 'home.html')
 
-def contact(request):
-    return render(request, 'contact.html')
+def gallery(request):
+    return render(request, 'gallery.html')
 
 def about(request):
     return render(request, 'about.html')

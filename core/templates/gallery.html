@@ -1,0 +1,99 @@
+{% extends "base.html" %}
+{% load static %}
+{% block content %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.css" />
+    <link rel="stylesheet" href="{% static 'css/grid-gallery.css'%}">
+    <style>
+       #mainNav{
+           background-color: #212529 !important;
+       }
+       #a-gallery {
+           background-color: #FFBE00 !important;
+           color:black;
+       }
+      
+    
+    </style>
+    <!-- Heading Row-->
+    <header id="galeria" class="heading">
+         <div class="container">
+            <div class="row">
+                <div class="text-center">
+                    <h2 class="section-heading text-uppercase">GALERIA</h2>
+                </div>
+            </div>
+    </header>
+    
+    <section class="page-section bg-light gallery-block grid-gallery h-100" id="galeria">
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-6 col-lg-4 item">
+                        <a class="lightbox" href="{% static 'assets/img/galeria/1.jpeg'%}">
+                            <img class="img-fluid image scale-on-hover" src="{% static 'assets/img/galeria/1.jpeg'%}">
+                        </a>
+                    </div>
+                    <div class="col-md-6 col-lg-4 item">
+                        <a class="lightbox" href="{% static 'assets/img/galeria/2.jpeg'%}">
+                            <img class="img-fluid image scale-on-hover" src="{% static 'assets/img/galeria/2.jpeg'%}">
+                        </a>
+                    </div>  
+                    <div class="col-md-6 col-lg-4 item">
+                        <a class="lightbox" href="{% static 'assets/img/galeria/3.jpeg'%}">
+                            <img class="img-fluid image scale-on-hover" src="{% static 'assets/img/galeria/3.jpeg'%}">
+                        </a>
+                    </div>  
+                    <div class="col-md-6 col-lg-4 item">
+                        <a class="lightbox" href="{% static 'assets/img/galeria/4.jpeg'%}">
+                            <img class="img-fluid image scale-on-hover" src="{% static 'assets/img/galeria/4.jpeg'%}">
+                        </a>
+                    </div>  
+                    <div class="col-md-6 col-lg-4 item">
+                        <a class="lightbox" href="{% static 'assets/img/galeria/5.jpeg'%}">
+                            <img class="img-fluid image scale-on-hover" src="{% static 'assets/img/galeria/5.jpeg'%}">
+                        </a>
+                    </div>  
+                    <div class="col-md-6 col-lg-4 item">
+                        <a class="lightbox" href="{% static 'assets/img/galeria/6.jpeg'%}">
+                            <img class="img-fluid image scale-on-hover" src="{% static 'assets/img/galeria/6.jpeg'%}">
+                        </a>
+                    </div>  
+                    <div class="col-md-6 col-lg-4 item">
+                        <a class="lightbox" href="{% static 'assets/img/galeria/7.jpeg'%}">
+                            <img class="img-fluid image scale-on-hover" src="{% static 'assets/img/galeria/7.jpeg'%}">
+                        </a>
+                    </div>  
+                    <div class="col-md-6 col-lg-4 item">
+                        <a class="lightbox" href="{% static 'assets/img/galeria/8.jpeg'%}">
+                            <img class="img-fluid image scale-on-hover" src="{% static 'assets/img/galeria/8.jpeg'%}">
+                        </a>
+                    </div>  
+                    <div class="col-md-6 col-lg-4 item">
+                        <a class="lightbox" href="{% static 'assets/img/galeria/9.jpeg'%}">
+                            <img class="img-fluid image scale-on-hover" src="{% static 'assets/img/galeria/9.jpeg'%}">
+                        </a>
+                    </div>  
+                    <div class="col-md-6 col-lg-4 item">
+                        <a class="lightbox" href="{% static 'assets/img/galeria/10.jpeg'%}">
+                            <img class="img-fluid image scale-on-hover" src="{% static 'assets/img/galeria/10.jpeg'%}">
+                        </a>
+                    </div>  
+                    <div class="col-md-6 col-lg-4 item">
+                        <a class="lightbox" href="{% static 'assets/img/galeria/11.jpeg'%}">
+                            <img class="img-fluid image scale-on-hover" src="{% static 'assets/img/galeria/11.jpeg'%}">
+                        </a>
+                    </div>  
+                    <div class="col-md-6 col-lg-4 item">
+                        <a class="lightbox" href="{% static 'assets/img/galeria/12.jpeg'%}">
+                            <img class="img-fluid image scale-on-hover" src="{% static 'assets/img/galeria/12.jpeg'%}">
+                        </a>
+                    </div>  
+
+            </div>
+        </div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
+    <script>
+        baguetteBox.run('.grid-gallery', { animation: 'slideIn'});
+    </script>
+    
+{% endblock %}

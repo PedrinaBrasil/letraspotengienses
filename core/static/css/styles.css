@@ -14,6 +14,8 @@
 }
 html, body{
   min-height: 100% !important;
+  /* height: 100%; */
+  /* background: black; */
 }
 
 body {
@@ -151,6 +153,9 @@ body .primary-button {
   /* line-height: 135px; */
   /* background-position: 0; */
   border-top: 5px solid #ffc800;
+  position: relative;
+  height: auto;
+  /* margin-top: 135px; */
 }
 ul.errorlist {
   margin: 0;
@@ -173,7 +178,7 @@ form.pure-form-aligned ul.errorlist li {
   font-weight: bold;
   font-size: 100%;
   min-width: 100px;
-  text-align: left;
+  /* text-align: left; */
 }
 .pure-form input[type], .pure-form textarea, .pure-form  select {
   border: 2px solid #ddd;
@@ -411,7 +416,7 @@ h4.my-3.step {
 }
 
 
-#depoimentos h2 {
+#depoimentos h2, #galeria h2 {
   background-image: url(../assets/img/2.png), url(../assets/img/2.png);
   background-position: right top, left top;
   background-repeat: no-repeat, no-repeat;
@@ -464,7 +469,7 @@ header.heading {
 }
 
 
-#login .col-sm-5, #registro .col-sm-5{
+.form-wrap{
 
   margin: auto;
   text-align: center;
@@ -511,7 +516,7 @@ ul#user-menu {
       padding-top: 90px;
       padding-bottom: 0;
   }
-  #descricao .col-lg-5{
+  .form-wrap{
     text-align: center;
   }
 

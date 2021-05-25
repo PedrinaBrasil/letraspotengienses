@@ -25,6 +25,7 @@
                     {% endblock %}
                     </h2>
                     <ul id="user-menu">
+                        <li><a id="a-painel" href="{% url 'panel:dashboard' %}">Painel</a></li>
                         <li><a id="a-senha" href="{% url 'panel:editpassword' %}">Editar Senha</a></li>
                         <li><a id="a-conta" href="{% url 'panel:edituser' %}">Editar Conta</a></li>
                         <li><a href="{% url 'panel:logout' %}">Sair</a></li>
