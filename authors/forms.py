@@ -24,19 +24,19 @@ class RegisterForm(forms.ModelForm):
     
     class Meta:
         model = User
-        fields = ['name', 'ocucupation', 'username']
+        fields = ['name', 'ocucupation', 'email']
 
 class EditAccountForm(forms.ModelForm):
-    def clean_username(self):
-        username = self.cleaned_data['username']
-        queryset = User.objects.filter(username=username).exclude(pk=self.instance.pk)
+    def clean_email(self):
+        email = self.cleaned_data['email']
+        queryset = User.objects.filter(email=email).exclude(pk=self.instance.pk)
         if queryset.exists():
             raise forms.ValidationError('E-mail já cadastrado.')
-        return username
+        return email
 
     class Meta:
         model = User
-        fields = ['name','ocucupation', 'username']
+        fields = ['name','ocucupation', 'email']
 
 
 class PasswordResetForm(forms.Form):

@@ -447,7 +447,7 @@ header.heading {
   padding-bottom: 2rem;
 }
 
-#about h2 {
+#about h2, #acervo h2 {
   background-image: url(../assets/img/3.png), url(../assets/img/3.png);
   background-position: right top, left top;
   background-repeat: no-repeat, no-repeat;

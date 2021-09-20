@@ -23,5 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls', namespace='core')),
     path('painel/', include('accounts.urls', namespace='panel')),
-    
+    path('author/', include('authors.urls', namespace='authors')),
 ]
