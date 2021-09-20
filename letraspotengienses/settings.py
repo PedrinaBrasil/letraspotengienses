@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-oa^u8lpx%8+pme*t&y$su!=2+q6xh)c^!^oa+7vn)+1-sw9zdl
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['lausana.ifrn.edu.br', 'localhost']
 
 
 # Application definition
@@ -146,6 +146,7 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'letraspotengienses', 'media')
 MEDIA_URL = '/media/'
 
 #CONFIGURAÇÃO EMAIL
+'''
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 DEFAULT_FROM_EMAIL = 'LETRAS POTENGIENSES <letraspotengienses@gmail.com>'
 EMAIL_USE_TLS = True
@@ -155,7 +156,7 @@ EMAIL_HOST_PASSWORD = 'moockinho123'
 EMAIL_PORT= 587
 
 CONTACT_EMAIL = 'letraspotengienses@gmail.com'
-
+'''
 #Auth
 LOGIN_URL='panel:login'
 LOGIN_REDIRECT_URL= 'panel:dashboard'
